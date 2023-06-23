@@ -53,7 +53,7 @@ class Blockchain():
   
   def mining(self):
     self.addTransaction(SENDER,self.minerAddress,REWORD);
-    previousHash = self.chain[-1];
+    previousHash = self.hash(self.chain[-1]);
     nonce = self.proofOfWork();
     self.createBlock(nonce,previousHash);
     print('⛏⛏⛏⛏Mining Success⛏⛏⛏⛏')
